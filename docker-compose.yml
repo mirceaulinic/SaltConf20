@@ -1,0 +1,81 @@
+version: "2.4"
+services:
+  salt:
+    image: mirceaulinic/salt-master:2020.9.15
+    container_name: salt
+    restart: unless-stopped
+    hostname: salt
+    networks:
+      - ntc-training
+    volumes:
+      - /srv/salt:/srv/salt
+      - /etc/salt:/etc/salt
+  salt_vmx1:
+    image: mirceaulinic/salt-proxy:2020.9.15
+    container_name: salt_vmx1
+    restart: unless-stopped
+    networks:
+      - ntc-training
+    depends_on:
+      - salt
+      - vmx1
+    volumes:
+      - /etc/salt:/etc/salt
+    environment:
+      PROXYID: vmx1  
+  salt_vmx2:
+    image: mirceaulinic/salt-proxy:2020.9.15
+    container_name: salt_vmx2
+    restart: unless-stopped
+    networks:
+      - ntc-training
+    depends_on:
+      - salt
+      - vmx2
+    volumes:
+      - /etc/salt:/etc/salt
+    environment:
+      PROXYID: vmx2
+  salt_vmx3:
+    image: mirceaulinic/salt-proxy:2020.9.15
+    container_name: salt_vmx3
+    restart: unless-stopped
+    networks:
+      - ntc-training
+    depends_on:
+      - salt
+      - vmx3
+    volumes:
+      - /etc/salt:/etc/salt
+    environment:
+      PROXYID: vmx3
+  salt_eos-spine1:
+    image: mirceaulinic/salt-proxy:2020.9.15
+    container_name: salt_eos-spine1
+    restart: unless-stopped
+    networks:
+      - ntc-training
+    depends_on:
+      - salt
+      - eos-spine1
+    volumes:
+      - /etc/salt:/etc/salt
+    environment:
+      PROXYID: eos-spine1
+  salt_eos-spine2:
+    image: mirceaulinic/salt-proxy:2020.9.15
+    container_name: salt_eos-spine2
+    restart: unless-stopped
+    networks:
+      - ntc-training
+    depends_on:
+      - salt
+      - eos-spine2
+    volumes:
+      - /etc/salt:/etc/salt
+    environment:
+      PROXYID: eos-spine2
+
+networks:
+  ntc-training:
+    name: ntc-training
