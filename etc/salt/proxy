@@ -1,0 +1,4 @@
+open_mode: true
+pki_dir: /etc/salt/pki/proxy
+cachedir: /var/cache/salt/proxy
+multiprocessing: false

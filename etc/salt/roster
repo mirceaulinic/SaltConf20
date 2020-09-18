@@ -1,0 +1,5 @@
+{%- for i in [1,2,3] %}
+csr{{ i }}:
+  grains:
+    role: cpe
+{%- endfor %}

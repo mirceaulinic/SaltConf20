@@ -1,0 +1,5 @@
+{%- if grains.os == 'junos' %}
+set system host-name {{ grains.id }}
+{%- elif grains.os in ['eos'] %}
+hostname {{ grains.id }}
+{%- endif %}
