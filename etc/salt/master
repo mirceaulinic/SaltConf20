@@ -13,3 +13,20 @@ roster: file
 roster_file: /etc/salt/roster
 
 use_existing_proxy: true
+
+
+# =====================================================
+# Salt API configuration:
+# (for simplicity, using the "auto" authenticator, not
+#  recommended in production environments)
+
+external_auth:
+  auto:
+    test-usr:
+    - '@jobs'
+    - '@runner'
+    - .*
+
+rest_cherrypy:
+  disable_ssl: true
+  port: 8080
