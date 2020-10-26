@@ -14,7 +14,6 @@ roster_file: /etc/salt/roster
 
 use_existing_proxy: true
 
-
 # =====================================================
 # Salt API configuration:
 # (for simplicity, using the "auto" authenticator, not

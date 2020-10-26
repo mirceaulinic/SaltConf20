@@ -22,7 +22,7 @@ services:
     volumes:
       - /etc/salt:/etc/salt
     environment:
-      PROXYID: vmx1  
+      PROXYID: vmx1
   salt_vmx2:
     image: mirceaulinic/salt-proxy:2020.9.15
     container_name: salt_vmx2
@@ -75,7 +75,3 @@ services:
       - /etc/salt:/etc/salt
     environment:
       PROXYID: eos-spine2
-
-networks:
-  ntc-training:
-    name: ntc-training

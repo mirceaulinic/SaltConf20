@@ -1,7 +1,7 @@
-Interop 2020: Automating Network Using Salt, Without Running Proxy Minions
+SaltConf20: Managing Networks and Applications Using Salt, Without Minions
 ==========================================================================
 
-salt-sproxy configuration files for the Interop live demo.
+salt-sproxy configuration files for the SaltConf20 live demo.
 
 Usage
 -----
@@ -10,13 +10,13 @@ Usage
 
 .. code-block:: bash
 
-    git clone https://github.com/mirceaulinic/interop-2020.git
+    git clone https://github.com/mirceaulinic/SaltConf20.git
 
-2. Move into the new ``interop-2020`` directory:
+2. Move into the new ``SaltConf20`` directory:
 
 .. code-block:: bash
 
-    cd interop-2020/
+    cd SaltConf20/
 
 3. Create a symlink to the ``/etc/salt`` and ``/srv/salt`` directories:
 

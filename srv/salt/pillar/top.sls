@@ -3,5 +3,5 @@ base:
     - junos
   'eos*':
     - eos
-  'csr*':
-    - ios
+  'srv*':
+    - ssh

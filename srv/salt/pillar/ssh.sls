@@ -1,6 +1,5 @@
 proxy:
-  proxytype: napalm
-  driver: eos
+  proxytype: ssh
   host: {{ opts.id }}
   username: saltconf
   password: SaltConf20
