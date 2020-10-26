@@ -7,11 +7,10 @@ FROM python:3.7.9-slim-stretch
 MAINTAINER ping@mirceaulinic.net
 
 COPY sshd_config /etc/ssh/sshd_config
+COPY shadow /etc/shadow
 
 RUN apt-get update \
- && apt-get install -y sudo ssh \
- && useradd -m -N -s /bin/bash -u 1000 -p '$1$0Ln6JOkA$Hx1PqXoLRCLrpvZpgnQAM0' saltconf \
- && usermod -aG sudo saltconf \
+ && apt-get install -y ssh \
  && mkdir /run/sshd
 
 CMD /usr/sbin/sshd && tail -f /dev/null

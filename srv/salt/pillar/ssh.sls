@@ -1,5 +1,7 @@
 proxy:
   proxytype: ssh
   host: {{ opts.id }}
-  username: saltconf
-  password: SaltConf20
+  user: root
+  passwd: SaltConf20
+  ssh_options:
+    - 'StrictHostKeyChecking=no'
