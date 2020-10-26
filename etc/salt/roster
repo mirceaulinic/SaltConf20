@@ -1,5 +1,18 @@
-{%- for i in [1,2,3] %}
-csr{{ i }}:
+vmx3:
   grains:
-    role: cpe
+    role: router
+vmx4:
+  grains:
+    role: router
+eos-leaf1:
+  grains:
+    role: leaf
+eos-leaf2:
+  grains:
+    role: leaf
+
+{%- for i in [1,2,3] %}
+srv{{ i }}:
+  grains:
+    role: hypervisor
 {%- endfor %}

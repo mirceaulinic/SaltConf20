@@ -69,6 +69,12 @@ services:
     hostname: srv2
     container_name: srv2
     restart: unless-stopped
+  srv3:
+    build:
+      context: ./
+    hostname: srv3
+    container_name: srv3
+    restart: unless-stopped
   salt:
     image: mirceaulinic/salt-master:2020.9.15
     container_name: salt
