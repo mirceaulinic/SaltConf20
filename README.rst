@@ -34,3 +34,14 @@ Usage
     docker-compose -f docker-compose.yml up -d
 
 ✨🍰✨
+
+
+.. note::
+
+  In the *docker-compose.yml* file, the Docker images for the network OS 
+  have been replaced by "build-your-own-image", as the network OS is proprietary 
+  software that can only be distributed by the network vendors.
+
+  You can build your own Docker images, for example, using the excellent 
+  `vrnetlab <https://github.com/plajjan/vrnetlab>`__ or other similar 
+  solutions.
