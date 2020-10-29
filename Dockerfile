@@ -6,8 +6,7 @@ FROM python:3.7.9-slim-stretch
 
 MAINTAINER ping@mirceaulinic.net
 
-COPY sshd_config /etc/ssh/sshd_config
-COPY shadow /etc/shadow
+COPY id_ed25519.pub /root/.ssh/authorized_keys
 
 RUN apt-get update \
  && apt-get install -y ssh \
