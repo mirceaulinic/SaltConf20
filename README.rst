@@ -3,6 +3,8 @@ SaltConf20: Managing Networks and Applications Using Salt, Without Minions
 
 salt-sproxy configuration files for the SaltConf20 live demo.
 
+Slides: https://speakerdeck.com/mirceaulinic/saltconf20-managing-networks-and-applications-using-salt-without-minions
+
 Usage
 -----
 
