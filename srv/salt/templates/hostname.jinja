@@ -2,4 +2,6 @@
 set system host-name {{ grains.id }}
 {%- elif grains.os in ['eos'] %}
 hostname {{ grains.id }}
+{%- elif grains.kernel == 'Linux' %}
+{{ grains.id }}
 {%- endif %}
